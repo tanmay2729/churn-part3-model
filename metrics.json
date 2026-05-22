@@ -1,0 +1,41 @@
+{
+  "model": "Logistic Regression",
+  "threshold": 0.5,
+  "dataset": "rfm_modeling_snapshot.csv",
+  "split": "pre-assigned (train/validation/test)",
+  "test_metrics": {
+    "accuracy": 0.8065,
+    "precision": 0.8047,
+    "recall": 0.8095,
+    "f1_score": 0.8071,
+    "roc_auc": 0.8856,
+    "pr_auc": 0.8778
+  },
+  "confusion_matrix": {
+    "TP": 136,
+    "FP": 33,
+    "TN": 135,
+    "FN": 32
+  },
+  "baseline_val_metrics": {
+    "model": "Logistic Regression",
+    "accuracy": 0.8244,
+    "precision": 0.8143,
+    "recall": 0.7755,
+    "f1_score": 0.7944,
+    "roc_auc": 0.8849
+  },
+  "top_10_features": [
+    "recency_days",
+    "monetary_180d",
+    "return_rate_180d",
+    "ticket_count_90d",
+    "negative_ticket_rate_90d",
+    "last_visit_days_ago",
+    "avg_discount_pct_180d",
+    "sessions_30d",
+    "campaign_clicks_30d",
+    "frequency_180d"
+  ],
+  "leakage_prevention": "Used only rfm_modeling_snapshot.csv. Excluded: churn_next_60d, split, customer_id, snapshot_date."
+}
